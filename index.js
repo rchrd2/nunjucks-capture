@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function CaptureTag () {
+function CaptureTag () {
 
     this.tags = ['capture'];
 
@@ -23,6 +23,8 @@ module.exports = function CaptureTag () {
         }
     };
 };
+
+module.exports = CaptureTag;
 
 module.exports.install = function(env) {
     env.addExtension('CaptureTag', new CaptureTag());
