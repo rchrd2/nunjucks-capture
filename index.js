@@ -23,3 +23,7 @@ module.exports = function CaptureTag () {
         }
     };
 };
+
+module.exports.install = function(env) {
+    env.addExtension('CaptureTag', new CaptureTag());
+};
